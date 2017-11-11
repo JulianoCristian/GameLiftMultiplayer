@@ -22,9 +22,9 @@
 
 #define MAX_BOT_COUNT 8
 
-static const FString MapNames[] = { TEXT("Sanctuary"), TEXT("Highrise") };
-static const FString JoinMapNames[] = { TEXT("Any"), TEXT("Sanctuary"), TEXT("Highrise") };
-static const FName PackageNames[] = { TEXT("Sanctuary.umap"), TEXT("Highrise.umap") };
+static const FString MapNames[] = { TEXT("Highrise") };
+static const FString JoinMapNames[] = { TEXT("Any"),  TEXT("Highrise") };
+static const FName PackageNames[] = {  TEXT("Highrise.umap") };
 static const int DefaultTDMMap = 1;
 static const int DefaultFFAMap = 0; 
 static const float QuickmatchUIAnimationTimeDuration = 30.f;
