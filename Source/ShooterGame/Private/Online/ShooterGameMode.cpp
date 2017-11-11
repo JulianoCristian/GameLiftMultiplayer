@@ -250,6 +250,12 @@ bool AShooterGameMode::IsWinner(class AShooterPlayerState* PlayerState) const
 
 void AShooterGameMode::PreLogin(const FString& Options, const FString& Address, const FUniqueNetIdRepl& UniqueId, FString& ErrorMessage)
 {
+	UShooterGameInstance* GameInstance = Cast<UShooterGameInstance>(GetGameInstance());
+	if (GameInstance && GameInstance->GameLiftManager)
+	{
+		GameInstance->GameLiftManager->AcceptPlayerSession(Options, UniqueId, ErrorMessage);
+	}
+
 	AShooterGameState* const MyGameState = Cast<AShooterGameState>(GameState);
 	const bool bMatchIsOver = MyGameState && MyGameState->HasMatchEnded();
 	if( bMatchIsOver )

@@ -204,7 +204,8 @@ public:
 	/** Resets Play Together PS4 system event info after it's been handled */
 	void ResetPlayTogetherInfo() { PlayTogetherInfo = FShooterPlayTogetherInfo(); }
 
-
+	UPROPERTY()
+	class UGameLiftManager* GameLiftManager;
 
 private:
 
@@ -273,9 +274,6 @@ private:
 
 	/** A hard-coded encryption key used to try out the encryption code. This is NOT SECURE, do not use this technique in production! */
 	TArray<uint8> DebugTestEncryptionKey;
-
-	UPROPERTY()
-	class UGameLiftManager* GameLiftManager;
 
 	void HandleNetworkConnectionStatusChanged(  EOnlineServerConnectionStatus::Type LastConnectionStatus, EOnlineServerConnectionStatus::Type ConnectionStatus );
 

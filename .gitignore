@@ -3,3 +3,6 @@ Build/
 DerivedDataCache/
 Intermediate/
 Saved/
+.vs/
+GameLiftMultiplayer.sln
+GameLiftMultiplayer.VC.*
